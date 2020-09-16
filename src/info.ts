@@ -23,7 +23,9 @@ import RaspberryMobile from './assets/raspberry.jpg';
 import SupportMain from './assets/supportMain.jpg';
 import SupportList from './assets/supportList.jpg';
 import SupportAuth from './assets/supportAuth.png';
-
+import RecipeMockup from './assets/recipe.jpg';
+import RecipeMain from './assets/recipe3.jpg';
+import RecipeSearch from './assets/recipe4.jpg';
 
 export interface IProject {
     name: string,
@@ -125,6 +127,16 @@ export const Info: IInfo = {
             type: 'web',
             githubLink: 'https://github.com/Ait0ne/myVideoChat',
             websiteLink: 'https://fathomless-fjord-74738.herokuapp.com/'
+        },
+        {
+            name: 'RecipeSearch',
+            shortDescription: 'Website for searching recipes by ingredients',
+            longDescription: 'Website for searching recipes by ingredients made with React and PostgreSQL',
+            technologies: ['React', 'Javascript', 'Python', 'PostgreSQL'],
+            images: [RecipeMockup, RecipeMain, RecipeSearch],
+            type: 'web',
+            githubLink: 'https://github.com/Ait0ne/RecipeSearch',
+            websiteLink: 'https://calm-dusk-58826.herokuapp.com/'
         },
         {
             name: 'Travellog',
