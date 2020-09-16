@@ -12,4 +12,11 @@ left: 0;
 background-color: rgb(0, 0, 0);
 color: white;
 z-index:100;
+font-size: 2rem;
+>div >span {
+    margin: 0 8px
+}
+@media (max-width: 600px) {
+    font-size: 1.6rem;
+}
 `

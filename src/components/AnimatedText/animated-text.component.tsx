@@ -6,27 +6,43 @@ import {TextContainer} from './animated-text.styles';
 
 interface TextProps {
     text: string,
-    filledSymbols?: number
+    filledSymbols?: number,
+    loop?:boolean,
+    duration?: number,
+    delay?: number
 }
 
-const AnimatedText: React.FC<TextProps> = ({text, filledSymbols}) => {
+const AnimatedText: React.FC<TextProps> = ({text, filledSymbols, loop, duration, delay}) => {
     const {ref, inView} = useInView()
     const letters = text.split('')
     const controls = useAnimation()
 
     useEffect(()=> {
         if (inView) {
-            controls.start(i => ({
-                opacity: 1,
-                y: '0px',
-                transition:{
-                    duration: 1.2,
-                    delay: i*0.1,
-                    ease: "easeInOut"
-                }
-            }))
+            if (loop) {
+                controls.start(i => ({
+                    y: ['-80px', '-0px','-80px'],
+                    transition:{
+                        duration: duration? duration: 1.2,
+                        delay: i*(delay?delay: 0.1),
+                        ease: "easeInOut",
+                        repeatType: 'loop',
+                        repeat: Infinity
+                    }
+                }))                
+            } else {
+                controls.start(i => ({
+                    opacity: 1,
+                    y: '0px',
+                    transition:{
+                        duration: duration? duration: 1.2,
+                        delay: i*(delay?delay: 0.1),
+                        ease: "easeInOut"
+                    }
+                }))
+            }
         }
-    }, [inView, controls])
+    }, [inView, controls, loop, delay, duration])
 
     return (
         <TextContainer ref={ref} >
@@ -35,7 +51,7 @@ const AnimatedText: React.FC<TextProps> = ({text, filledSymbols}) => {
                     return (
                         <motion.span
                         key={i}
-                        initial={{y:'-100px', opacity: 0}}
+                        initial={loop?{y:'-80px'}:{y:'-100px', opacity: 0}}
                         animate={controls}
                         custom={i}
                         style={{minWidth: '10px', color: filledSymbols&&i<filledSymbols? '#04c2c9': 'white'}}

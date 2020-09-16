@@ -88,10 +88,13 @@ margin: 5px 0;
 `
 
 export const ProjectDescription = styled.p`
-max-width: 40ch;
+max-width: 50ch;
 margin: 5px 0;
 >a {
     color:rgb(4,194,201)
+}
+@media (max-width: 768px) {
+    font-size: 0.8rem;
 }
 `
 
@@ -99,7 +102,7 @@ export const ProjectButtons = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-around;
-margin-top: 10px;
+margin-top: 5px;
 `
 
 export const CustomButton = styled.a`

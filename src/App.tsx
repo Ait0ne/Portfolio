@@ -26,13 +26,13 @@ function App() {
       .then(() => {
         setAnimationEnd(true)
       })
-    }, 600)
+    }, 1600)
   }, [controls])
 
   useEffect(()=> {
     setTimeout(() => {
       setLoading(false)
-    }, 1300);
+    }, 2300);
   }, [])
 
 

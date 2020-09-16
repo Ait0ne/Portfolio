@@ -29,6 +29,7 @@ align-items: center;
 flex-direction: column;
 > p {
     margin: 5px;
+    text-align:center;
     >span {
         color: rgb(4,194,201);
     }

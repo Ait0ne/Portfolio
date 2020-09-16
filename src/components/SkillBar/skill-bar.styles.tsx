@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 
 
 export const SkillBarContainer = styled(motion.div)`
-height: 30px;
+height: 35px;
 width: 100%;
 display: flex;
 flex-direction: row;

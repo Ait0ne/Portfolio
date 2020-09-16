@@ -73,6 +73,7 @@ flex-direction: column;
     width:100%;
     max-width: 500px;
     font-size: 0.8rem;
+    margin: 50px 0;
 }
 `
 

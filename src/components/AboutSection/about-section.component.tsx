@@ -24,6 +24,7 @@ interface AboutSectionProps {
 
 const AboutSection : React.FC<AboutSectionProps> = ({aboutRef}) => {
     const {ref, inView} = useInView()
+    const [photoRef, photoInView] = useInView()
     const skillsSectionControls= useAnimation()
     const photoControls = useAnimation()
     const [animateSkillBar, setAnimateSkillBar] = useState(false)
@@ -34,11 +35,16 @@ const AboutSection : React.FC<AboutSectionProps> = ({aboutRef}) => {
             skillsSectionControls.start({
                 x: '0%'
             }).then(()=> setAnimateSkillBar(true))
+        }
+    }, [skillsSectionControls, inView])
+
+    useEffect(() => {
+        if (photoInView) {
             photoControls.start({
                 rotateY: '0deg'
             })
         }
-    }, [skillsSectionControls, photoControls, inView])
+    }, [photoControls, photoInView])
 
     return (
         <AboutSectionContainer >
@@ -61,6 +67,7 @@ const AboutSection : React.FC<AboutSectionProps> = ({aboutRef}) => {
                     ease: 'easeIn'
                     
                 }}
+                ref={photoRef}
                 >
                 </PhotoContainer>
             </PersonalInfoSection>
