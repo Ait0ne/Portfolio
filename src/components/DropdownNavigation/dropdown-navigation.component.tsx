@@ -28,7 +28,7 @@ const DropdownNavigation: React.FC<DropdownProps&NavigationProps> = ({toggleDrop
                 console.log(refs[section-1])
                 console.log(top)
                 window.scrollTo({
-                    top: top-60,
+                    top: top-150,
                     behavior: 'smooth'
                 })
             }
