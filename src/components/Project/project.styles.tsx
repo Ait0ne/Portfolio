@@ -55,6 +55,7 @@ width: 40%;
 
 export const ProjectTitle = styled.h1`
 margin: 0;
+text-align: center;
 `
 
 

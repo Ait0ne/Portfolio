@@ -26,6 +26,11 @@ import SupportAuth from './assets/supportAuth.png';
 import RecipeMockup from './assets/recipe.jpg';
 import RecipeMain from './assets/recipe3.jpg';
 import RecipeSearch from './assets/recipe4.jpg';
+import InventoryLanding from './assets/inventory.png';
+import InventoryStructure from './assets/inventory2.png';
+import InventoryCreate from './assets/inventory3.png';
+import InventoryItems from './assets/inventory4.png';
+import CourseraML from './assets/courseraML.png';
 
 export interface IProject {
     name: string,
@@ -176,6 +181,26 @@ export const Info: IInfo = {
             images: [SupportMain, SupportList, SupportAuth],
             type: 'web',
             githubLink: 'https://github.com/Ait0ne/RaspberryCustomerSupport.git'
+        },
+        {
+            name: 'myInventory',
+            shortDescription: 'Website for managing home inventory',
+            longDescription: 'Website made with Django for creating and managing inventory of your home',
+            technologies: ['Python', 'Django'],
+            images: [InventoryLanding, InventoryStructure, InventoryCreate, InventoryItems],
+            type: 'web',
+            githubLink: 'https://github.com/Ait0ne/Myinventory2.0',
+            websiteLink: 'http://myinventory.site/'
+
+        },
+        {
+            name: 'Housing prices analysis for Moscow City',
+            shortDescription: 'Made as part of a final assignment for Coursera IBM Data Science Specialization',
+            longDescription: 'Data analysis project created as a part of Coursera IBM Data Science Specialization',
+            technologies: ['Python', 'SciKitLearn', 'Pandas', 'Numpy'],
+            images: [CourseraML],
+            type: 'web',
+            githubLink: 'https://github.com/Ait0ne/Coursera_Capstone/blob/master/Coursera%20Capstone%20Final%20Assignment.ipynb'
         }
     ]
 }

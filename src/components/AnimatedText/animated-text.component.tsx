@@ -16,12 +16,13 @@ const AnimatedText: React.FC<TextProps> = ({text, filledSymbols, loop, duration,
     const {ref, inView} = useInView()
     const letters = text.split('')
     const controls = useAnimation()
+    const waveControls = useAnimation()
 
     useEffect(()=> {
         if (inView) {
             if (loop) {
                 controls.start(i => ({
-                    y: ['-80px', '-0px','-80px'],
+                    y: [`-80px`, '-0px','-80px'],
                     transition:{
                         duration: duration? duration: 1.2,
                         delay: i*(delay?delay: 0.1),
@@ -42,7 +43,7 @@ const AnimatedText: React.FC<TextProps> = ({text, filledSymbols, loop, duration,
                 }))
             }
         }
-    }, [inView, controls, loop, delay, duration])
+    }, [inView, controls, loop, delay, duration, waveControls])
 
     return (
         <TextContainer ref={ref} >
@@ -51,7 +52,7 @@ const AnimatedText: React.FC<TextProps> = ({text, filledSymbols, loop, duration,
                     return (
                         <motion.span
                         key={i}
-                        initial={loop?{y:'-80px'}:{y:'-100px', opacity: 0}}
+                        initial={loop?{y:`-80px`}:{y:'-100px', opacity: 0}}
                         animate={controls}
                         custom={i}
                         style={{minWidth: '10px', color: filledSymbols&&i<filledSymbols? '#04c2c9': 'white'}}

@@ -51,7 +51,7 @@ const DropdownNavigation: React.FC<DropdownProps&NavigationProps> = ({toggleDrop
                         Portfolio
                     </DropdownOption>
                     <DropdownOption onClick={() => handleNavigation(3)}>
-                        Contact
+                        Contacts
                     </DropdownOption>
                 </DropdownContainer>
             </SplitAnimation>
