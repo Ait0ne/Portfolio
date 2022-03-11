@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({footerRef}) => {
                     <p>Or by phone <span>+7-(985)-915-38-58</span></p>
                 </Contacts>
                 <Info>
-                    <a href='https://github.com/Ait0ne/Portfolio.git' target='_blank' rel="noopener noreferrer">
+                    <a href='https://github.com/Ait0ne666' target='_blank' rel="noopener noreferrer">
                         <FontAwesomeIcon size='2x' icon={faGithub}/>
                     </a>
                     <span>YUKHANOV SERGEY <span><FontAwesomeIcon icon={faCopyright}/> 2020 </span></span>

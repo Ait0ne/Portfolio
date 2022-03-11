@@ -81,3 +81,24 @@ export const SkillsSectionHeader = styled.h3`
 align-self: flex-end;
 text-align: right;
 `
+
+
+export const SkillBadge = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+
+background-color: #04c2c9;
+color: white;
+border-radius: 20px;
+padding: 10px 20px;
+`
+
+
+
+export const SkillsContainer = styled.div`
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 10px;
+`

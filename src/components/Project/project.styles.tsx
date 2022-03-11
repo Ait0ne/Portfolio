@@ -23,13 +23,13 @@ interface ImageContainerProps {
 }
 
 export const ImageContainer = styled(motion.div)<ImageContainerProps>`
-    max-width: ${props => props.type==='web'? '600px': '200px'};
+    max-width: ${props => props.type==='web'? '600px': '600px'};
     width: 60%;
     cursor: pointer;
     transition: all 0.5s ease 0s;
     >img {
         
-        max-width: ${props => props.type==='web'? '600px': '200px'};
+        max-width: ${props => props.type==='web'? '600px': '600px'};
         width: 100%;
         cursor: pointer;
         box-shadow:  5px 30px 60px rgba(4, 229, 229, 0.2);
