@@ -13,6 +13,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons';
 import { useWindowDimensions } from '../../hooks/useWindowDimension.hook';
 import {useAnimation, motion} from 'framer-motion';
+import PlaygroundCanvas from '../Canvas/canvas';
 
 interface landingProps {
     animationEnd: boolean
@@ -66,7 +67,7 @@ const LandingSection : React.FC<landingProps> = ({animationEnd}) => {
 
     return (
         <LandingSectionContainer style={{backgroundImage: `url(${BackgroundImage})`}}>
-            <LandingSectionContent>
+            {/* <LandingSectionContent>
                 <LandingSectionText>
                     <NameText>
                         <Block
@@ -103,7 +104,8 @@ const LandingSection : React.FC<landingProps> = ({animationEnd}) => {
                 >
                     <span>About Me<FontAwesomeIcon icon={faArrowRight} size='lg'/></span>
                 </PortfolioButton>
-            </LandingSectionContent>
+            </LandingSectionContent> */}
+            <PlaygroundCanvas/>
         </LandingSectionContainer>
     )
 }
